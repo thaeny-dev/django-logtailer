@@ -24,3 +24,8 @@ class LogsClipboardAdmin(admin.ModelAdmin):
 admin.site.register(LogFile, LogFileAdmin)
 admin.site.register(Filter, FilterAdmin)
 admin.site.register(LogsClipboard, LogsClipboardAdmin)
+
+# auto-register LogFiles from LOGTAILER_REGISTER_LOGFILES-setting if exists
+register_logfiles = settings.LOGTAILER_REGISTER_LOGFILES if hasattr(settings, 'LOGTAILER_REGISTER_LOGFILES') else []
+for (name, path) in register_logfiles.items():
+    LogFile.objects.get_or_create(name=name, defaults={'path': path})

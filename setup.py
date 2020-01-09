@@ -14,17 +14,17 @@ def read(fname):
 setup(
     name="django-logtailer",
     version=version,
-    url='https://github.com/fireantology/django-logtailer',
+    url='https://github.com/thaeny-dev/django-logtailer',
     license='BSD',
     platforms=['OS Independent'],
     description="Allows to read log files from disk with a tail like web "
                 "console on Django admin interface. ",
     long_description=read('README.rst'),
-    author='Mauro Rocco',
-    author_email='fireantology@gmail.com',
+    author='Thomas Haeny',
+    author_email='dev@haeny.de',
     packages=find_packages(),
     install_requires=(
-        'Django>=1.8',
+        'Django>=2.2',
     ),
     include_package_data=True,
     zip_safe=False,
@@ -42,9 +42,11 @@ setup(
         'Framework :: Django :: 1.9',
         'Framework :: Django :: 1.10',
         'Framework :: Django :: 1.11',
+        'Framework :: Django :: 2.2',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
     ],
 )
