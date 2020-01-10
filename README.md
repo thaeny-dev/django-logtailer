@@ -10,7 +10,7 @@ Integrate fixes from:
 
 
 ## Extensions
-Add an auto-registering for LogFiles in the setting `LOGTAILER_REGISTER_LOGFILES`.  
+Add an auto-registering for logfiles in the setting `LOGTAILER_REGISTER_LOGFILES`.  
 Just add the following to your `settings.py`:
 ```
 LOGTAILER_REGISTER_LOGFILES = {
@@ -19,10 +19,17 @@ LOGTAILER_REGISTER_LOGFILES = {
 }
 ```
 Where `LOGS_DIR` is an `environ.Path()` pointing to your log-directory. You can you use any other path-building mechanism, it has to result in an absolute path to the log-file.    
-The LogFile-Entries are only added to the LogFile-Model/Admin when they doesn't exist already with the same name (e.g. 'Django-Log')  
+The logfile-entries are only added to the LogFile-Model/Admin when they doesn't exist already with the same name (e.g. 'Django-Log')  
 
 
 ## Source
-Author: Thomas Häny  
-Version: 1.1  
-Repo: https://github.com/thaeny-dev/django-logtailer
+Author: Thomas Häny <dev@haeny.de>  
+Version: 1.1.2  
+Repo: https://github.com/thaeny-dev/django-logtailer  
+Dependencies: Django (>=2)  
+Requires: Python 3.6+  
+
+##Changelog
+1.1.2   move auto-register-code to apps.py, avoid running code during migrations, bugfixing  
+1.1.1   Add auto-registering for LOGTAILER_REGISTER_LOGFILES    
+1.1.0   Fork from fireantology/django-logtailer and integrate fixes (Django2-models, Python3.6-views)
