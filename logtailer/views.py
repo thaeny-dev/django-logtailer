@@ -53,6 +53,10 @@ def get_log_lines(request, file_id, history=False):
     except LogFile.DoesNotExist:
         return HttpResponse(json.dumps([_('error_logfile_notexist')]),
                             content_type='text/html')
+
+    if not os.path.exists(file_record.path):
+        return HttpResponse(json.dumps([_('error_logpath_notexist') + '<br />']),
+                            content_type='text/html')
     content = []
     file = open(file_record.path, 'r')
 
