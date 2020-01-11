@@ -29,8 +29,8 @@ Repo: https://github.com/thaeny-dev/django-logtailer
 Dependencies: Django (>=2.2)  
 Requires: Python 3.6+  
 
-##Changelog  
-1.1.3   add error-message when file in logfile-path doesn't exist, add translation, for German as well  
+## Changelog  
+1.1.3   add error-message when file in logfile-path doesn't exist, add translations for German as well, remove jquery-colorbox-dependency and save-log-button (Issue #1)  
 1.1.2   move auto-register-code to apps.py, avoid running code during migrations, bugfixing  
 1.1.1   Add auto-registering for LOGTAILER_REGISTER_LOGFILES   
 1.1.0   Fork from fireantology/django-logtailer and integrate fixes (Django2-models, Python3.6-views)  
