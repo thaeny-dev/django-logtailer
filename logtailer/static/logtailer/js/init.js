@@ -17,7 +17,7 @@ django.jQuery('#filter-select').change(function() {
 django.jQuery('#log-window').html("")
 LogTailer.customFilter();
 
-django.jQuery("#save-logs").colorbox({width:"500px",
+/*django.jQuery("#save-logs").colorbox({width:"500px",
 									 height:"370px",
 									 inline:true,
 									 href:"#clipboard-form-container",
@@ -28,6 +28,7 @@ django.jQuery("#save-logs").colorbox({width:"500px",
 									 	django.jQuery("#clipboard-notes").val("");
 									 	django.jQuery("#clipboard-error").html("");
 									 }});
+*/
 
 django.jQuery('#clipboard-form').submit(function() {
   var error = false;
@@ -52,7 +53,7 @@ django.jQuery('#clipboard-form').submit(function() {
   	                   },
   	                   success: function(result){
   	                   	   alert(result);
-  	                   	   django.jQuery("#save-logs").colorbox.close();	
+  	                   	   //django.jQuery("#save-logs").colorbox.close();
   	                   }, 
   	                   dataType: "text"});
   }

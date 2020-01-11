@@ -6,11 +6,11 @@ from logtailer.models import LogFile, Filter, LogsClipboard
 class LogFileAdmin(admin.ModelAdmin):
     list_display = ('__unicode__', 'path')
     
-    class Media:
-        js = (settings.STATIC_URL+'logtailer/js/jquery.colorbox.js',)
-        css = {
-            'all': (settings.STATIC_URL+'logtailer/css/colorbox.css',)
-        }
+#    class Media:
+#        js = (settings.STATIC_URL+'logtailer/js/jquery.colorbox.js',)
+#        css = {
+#            'all': (settings.STATIC_URL+'logtailer/css/colorbox.css',)
+#        }
 
 
 class FilterAdmin(admin.ModelAdmin):
