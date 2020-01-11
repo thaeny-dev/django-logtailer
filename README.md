@@ -22,14 +22,15 @@ Where `LOGS_DIR` is an `environ.Path()` pointing to your log-directory. You can 
 The logfile-entries are only added to the LogFile-Model/Admin when they doesn't exist already with the same name (e.g. 'Django-Log')  
 
 
-## Source
+## Source  
 Author: Thomas Häny <dev@haeny.de>  
-Version: 1.1.2  
+Version: 1.1.3  
 Repo: https://github.com/thaeny-dev/django-logtailer  
-Dependencies: Django (>=2)  
+Dependencies: Django (>=2.2)  
 Requires: Python 3.6+  
 
-##Changelog
+##Changelog  
+1.1.3   add error-message when file in logfile-path doesn't exist, add translation, for German as well  
 1.1.2   move auto-register-code to apps.py, avoid running code during migrations, bugfixing  
-1.1.1   Add auto-registering for LOGTAILER_REGISTER_LOGFILES    
-1.1.0   Fork from fireantology/django-logtailer and integrate fixes (Django2-models, Python3.6-views)
+1.1.1   Add auto-registering for LOGTAILER_REGISTER_LOGFILES   
+1.1.0   Fork from fireantology/django-logtailer and integrate fixes (Django2-models, Python3.6-views)  
